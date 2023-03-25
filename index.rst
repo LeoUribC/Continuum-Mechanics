@@ -6,6 +6,20 @@
 Welcome to continuum-mechanics's documentation!
 ===============================================
 
+In this documentation will be an attempt to put in practice some key concepts
+learned through two of the courses that are actually being given in this
+semester, which are "scientific software engineering" and "computational
+mechanics".
+
+Here, will be solved the proposed exercises in computational mechanics using
+scientific software engineering concepts to keep a nice and clean documentation
+using clean code techniques and documentation tools learned so far.
+
+All the proposed exercises are listed in the **contents** section, the code
+files are visible in the :ref:`repository <https://github.com/LeoUribC/Continuum-Mechanics.git>`
+with the python test files.
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
