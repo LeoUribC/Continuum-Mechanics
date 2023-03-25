@@ -16,8 +16,12 @@ scientific software engineering concepts to keep a nice and clean documentation
 using clean code techniques and documentation tools learned so far.
 
 All the proposed exercises are listed in the **contents** section, the code
-files are visible in the :ref:`repository <https://github.com/LeoUribC/Continuum-Mechanics.git>`
+files are visible in the :ref:`repository<https://github.com/LeoUribC/Continuum-Mechanics.git>`
 with the python test files.
+
+.. math::
+   \frac{d}{dx} \left( \int_{g(x)}^{h(x)} f(x) dx \right) =
+   f_oh(x) \frac{dh}{dx} - f_og(x) \frac{dg}{dx}
 
 
 .. toctree::
