@@ -31,8 +31,10 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser', 'nbsphinx', "myst_nb"
+    'myst_parser', 'nbsphinx', "myst_nb", 'sphinx.ext.mathjax'
 ]
+
+myst_enable_extensions = ["amsmath", "dollarmath"]
 
 source_suffix = ['.rst', '.md']
 
