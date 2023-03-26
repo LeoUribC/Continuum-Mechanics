@@ -20,14 +20,14 @@ using clean code techniques and documentation tools learned so far.
 All the proposed exercises are listed in the **contents** section, the code
 files are visible in the `repository`_ with the python test files.
 
-.. math::
-   \frac{d}{dx} \left( \int_{g(x)}^{h(x)} f(x) dx \right) =
-   f_oh(x) \frac{dh}{dx} - f_og(x) \frac{dg}{dx}
+Navigate through the contents below to see the step-by-step solution to every
+proposed exercise:
 
 
 .. toctree::
    :maxdepth: 2
    :caption: Navigation:
 
+   Ejercicio_3_8.rst
+   Ejercicio_3_18.rst
    test.rst
-   notebook.rst
