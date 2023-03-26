@@ -20,7 +20,7 @@ the docs in the files. so let’s try out some testing notebook!
 
 
 
-.. image:: /../source/notebook_files/notebook_2_0.png
+.. image:: ../source/notebook_files/notebook_2_0.png
 
 
 Let’s try out some latex:
