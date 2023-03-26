@@ -27,4 +27,4 @@ with the python test files.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+   test.md
