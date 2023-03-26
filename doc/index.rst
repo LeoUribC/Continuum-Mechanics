@@ -30,4 +30,4 @@ files are visible in the `repository`_ with the python test files.
    :caption: Navigation:
 
    test.rst
-   notebook.ipynb
+   notebook.rst
