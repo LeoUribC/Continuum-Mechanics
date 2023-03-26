@@ -39,7 +39,7 @@ extensions = [
 
 myst_enable_extensions = ["amsmath", "dollarmath"]
 
-source_suffix = ['.rst', '.md']
+source_suffix = ['.rst', '.md', '.ipynb']
 
 master_doc = 'index'
 
