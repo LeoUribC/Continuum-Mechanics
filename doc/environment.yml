@@ -1,0 +1,20 @@
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - python>=3.5
+  - sphinx>=1.4
+  - pandoc
+  - nbconvert
+  - ipykernel
+  - nbsphinx
+  - pytest
+  - jupyterlab
+  - jupyterlab-git
+  - numpy
+  - sympy
+  - matplotlib
+  - pandas
+  - myst-nb
+  - myst-parser
