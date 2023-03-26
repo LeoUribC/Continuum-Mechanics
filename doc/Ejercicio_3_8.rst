@@ -16,7 +16,7 @@ given by the matrix
 (a) Show that the equilibrium ase satisfied everywhere for zero body
     forces
 (b) Determine the stress vector at the point :math:`P(2,-1,6)` of the
-    plane whose equation is $ 3x_1 + 6x_2 + 2x_3 = 12 $
+    plane whose equation is :math:`3x_1 + 6x_2 + 2x_3 = 12`.
 
 Solving
 -------
