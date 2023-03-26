@@ -34,8 +34,7 @@ release = '0.1'
 #import myst-nb
 #import myst-parser
 extensions = [
-    'sphinx.ext.autodoc', 'sphinx.ext.mathjax', 'sphinx.ext.autosectionlabel',
-    'nbsphinx'
+    'sphinx.ext.autodoc', 'sphinx.ext.mathjax', 'sphinx.ext.autosectionlabel'
 ]
 
 myst_enable_extensions = ["amsmath", "dollarmath"]
