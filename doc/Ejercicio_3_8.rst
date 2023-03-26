@@ -4,20 +4,19 @@
 Relative to the cartesian axes :math:`Ox_1x_2x_3` a stress field is
 given by the matrix
 
-$$ [t_{ij}] =
+.. math::
 
-:raw-latex:`\left[
-    \begin{array}{ll}
-        (1-x_1^2)x_2+\frac{2}{3}x_2^3 & -(4-x_2^2)x_1 & 0 \\
-        -(4-x_2^2)x_1 & -\frac{1}{3}(x_2^3 - 12x_2) & 0 \\
-        0 & 0 & (3-x_1^2)x_2
-    \end{array}
-\right]`$$
+   [t_{ij}] =
+   \begin{bmatrix}
+       (1-x_1^2)x_2 + \frac{2}{3}x_2^3  &  -(4 - x_2^2)x_1 & 0 \\
+       -(4 - x_2^2)x_1  &  -\frac{1}{3}(x_2^3 - 12x_2)  &  0 \\
+       0  &  0  & (3 - x_1^2)x_2
+   \end{bmatrix}
 
 (a) Show that the equilibrium ase satisfied everywhere for zero body
     forces
 (b) Determine the stress vector at the point :math:`P(2,-1,6)` of the
-    plane whose equation is :math:`3x_1+6x_2+2x_3=12`
+    plane whose equation is $ 3x_1 + 6x_2 + 2x_3 = 12 $
 
 Solving
 -------
