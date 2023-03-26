@@ -41,7 +41,7 @@ myst_enable_extensions = ["amsmath", "dollarmath"]
 
 source_suffix = ['.rst', '.md']
 
-master_doc = 'index.html'
+master_doc = 'index'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
