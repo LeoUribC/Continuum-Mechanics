@@ -30,11 +30,11 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-import nbsphinx
-import myst_nb
-import myst_parser
+#import nbsphinx
+#import myst_nb
+#import myst_parser
 extensions = [
-    'myst_parser', 'sphinx.ext.autodoc', 'nbsphinx', 'myst_nb', 'sphinx.ext.mathjax', 'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autodoc', 'sphinx.ext.mathjax', 'sphinx.ext.autosectionlabel'
 ]
 
 myst_enable_extensions = ["amsmath", "dollarmath"]
