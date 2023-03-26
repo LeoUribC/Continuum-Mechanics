@@ -5,6 +5,7 @@
 
 Welcome to continuum-mechanics's documentation!
 ===============================================
+
 .. _repository: https://github.com/LeoUribC/Continuum-Mechanics.git
 
 In this documentation will be an attempt to put in practice some key concepts
@@ -17,7 +18,7 @@ scientific software engineering concepts to keep a nice and clean documentation
 using clean code techniques and documentation tools learned so far.
 
 All the proposed exercises are listed in the **contents** section, the code
-files are visible in the `repository_` with the python test files.
+files are visible in the `repository`_ with the python test files.
 
 .. math::
    \frac{d}{dx} \left( \int_{g(x)}^{h(x)} f(x) dx \right) =
