@@ -27,6 +27,7 @@ files are visible in the `repository`_ with the python test files.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Navigation:
 
    test.rst
+   notebook.ipynb
