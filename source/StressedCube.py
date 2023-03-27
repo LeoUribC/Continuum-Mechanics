@@ -19,7 +19,7 @@ class StressedCube:
         return np.linalg.eigvals(self.stressTensor)
     
     def getPrincipalStressDirections(self):
-        return np.linalg.eig(self.stressTensor)
+        return np.linalg.eig(self.stressTensor)[1]
     
     def getTractionNormalComponent(self):
         return np.matmul(
@@ -40,4 +40,14 @@ class StressedCube:
         result = np.arccos( sigma_n / self.getTractionMagnitude() )
         if angle == 'deg':
             result = result*(180/np.pi)
+        elif angle not in ['rad', 'deg']:
+            raise Exception("you must enter a valid angle unit ('deg' or 'rad')")
         return result
+    
+    def normalizePrincipalDirections(self):
+        principalDirections = self.getPrincipalStressDirections().T
+        normalizedDirections = []
+        for direction in principalDirections:
+            normFactor = 1 / np.linalg.norm(direction)
+            normalizedDirections.append( normFactor*direction )
+        return np.array(normalizedDirections)
