@@ -143,27 +143,19 @@ We define deviatoric stress to be
 
 Then
 
-$$ [t_{ij}] =
+.. math::
 
-.. raw:: latex
-
+    [t_{ij}] =
    \begin{bmatrix}
        1 & -3 & \sqrt2 \\
        -3 & 1 & -\sqrt2 \\
        \sqrt2 & -\sqrt2 & 4
+   \end{bmatrix} -
+   \begin{bmatrix}
+       4/2 & 0 & 0 \\
+       0 & 4/2 & 0 \\
+       0 & 0 & 4/2
    \end{bmatrix}
-
--  
-
-   .. raw:: latex
-
-      \begin{bmatrix}
-         4/2 & 0 & 0 \\
-         0 & 4/2 & 0 \\
-         0 & 0 & 4/2
-      \end{bmatrix}
-
-   $$
 
 .. code:: python
 
