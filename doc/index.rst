@@ -30,4 +30,6 @@ proposed exercise:
 
    Ejercicio_3_8.rst
    Ejercicio_3_18.rst
+   Ejercicio_3_28.rst
+   Ejercicio_3_28.rst
    test.rst
