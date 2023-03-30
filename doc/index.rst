@@ -28,6 +28,7 @@ proposed exercise:
    :maxdepth: 2
    :caption: Navigation:
 
+   Exercise_1.rst
    Ejercicio_3_8.rst
    Ejercicio_3_18.rst
    Ejercicio_3_28.rst
