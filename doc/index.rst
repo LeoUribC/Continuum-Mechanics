@@ -24,9 +24,11 @@ Navigate through the contents below to see the step-by-step solution to every
 proposed exercise:
 
 
+Stress tensor, chapter 3
+*************************
+
 .. toctree::
    :maxdepth: 2
-   :caption: Stress tensor, chapter 3
 
    Exercise_1.rst
    Ejercicio_3_8.rst
@@ -36,9 +38,11 @@ proposed exercise:
    test.rst
 
 
+Conservation of mass and momentum in continuum, chapters 19 and 20
+*******************************************************************
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Conservation of mass and momentum in continuum, chapters 19 and 20
+   :maxdepth: 1
 
    Exercise_191.rst
    Exercise_203.rst
