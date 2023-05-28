@@ -4,10 +4,8 @@ Exercise 20.3
 Show that the right side of (20.4) can be written as:
 
 .. math::
-   :number: 1
-
    \rho \frac{ dv_j }{dt} = \frac{\partial}{\partial t} \left( \rho v_j \right) +
-   \frac{\partial}{\partial x_i} \left( \rho v_i v_j \right)
+   \frac{\partial}{\partial x_i} \left( \rho v_i v_j \right) \tag{1}
 
 and use this result to derive the equation for the balance of linear momentum for a
 control volume fixed in space.
