@@ -26,7 +26,7 @@ proposed exercise:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Navigation:
+   :caption: Stress tensor, chapter 3
 
    Exercise_1.rst
    Ejercicio_3_8.rst
@@ -34,3 +34,11 @@ proposed exercise:
    Ejercicio_3_28.rst
    Ejercicio_3_29.rst
    test.rst
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Conservation of mass and momentum in continuum, chapters 19 and 20
+
+   Exercise_191.rst
+   Exercise_203.rst
