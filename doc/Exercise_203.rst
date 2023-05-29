@@ -75,7 +75,7 @@ momentum and adding **the flux of momentum through the boundary into the volume*
 This is,
 
 .. math::
-    \sum \vec{F} = \frac{d}{dt} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv +
+    \sum \vec{F} = \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv +
     \int_{ \text{CS} } \hat{\text{n}} \cdot \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \; da
     \tag{4}
 
@@ -97,11 +97,11 @@ We can now compare equations :math:`(3)` and :math:`(4)` as follows:
 .. math::
     \begin{align}
         \int_{v(t)} \rho \text{b} \; dv + \int_{a(t)} \text{t} \; da &=
-        \frac{d}{dt} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv +
+        \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv +
         \int_{ \text{CS} } \hat{\text{n}} \cdot \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \; da \\
         \int_{v(t)} \rho \text{b} \; dv + \int_{a(t)} \text{t} \; da -
         \int_{ \text{CS} } \hat{\text{n}} \cdot \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \; da &=
-        \frac{d}{dt} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv
+        \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv
     \end{align}
 
 We must now apply the divergence theorem to all the parts that are expressed in terms
@@ -113,10 +113,10 @@ the definition with the stress tensor :math:`\sigma` and the normal direction
     \begin{align}
         \int_{v(t)} \rho \text{b} \; dv + \int_{a(t)} \sigma \cdot \hat{\text{n}} \; da -
         \int_{\text{CV}} \nabla \cdot \left\{ \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \right\} \; dv &=
-        \frac{d}{dt} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv \\
+        \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv \\
         \int_{v(t)} \rho \text{b} \; dv + \int_{v(t)} \nabla \cdot \sigma \; dv -
         \int_{\text{CV}} \nabla \cdot \left\{ \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \right\} \; dv &=
-        \int_{ \text{CV} } \rho \frac{d}{dt} \vec{ \text{v} } \; dv
+        \int_{ \text{CV} } \rho \frac{\partial}{\partial t} \vec{ \text{v} } \; dv
     \end{align}
 
 Note that in the right term the derivative was moved inside the integral, this was
@@ -125,10 +125,39 @@ all the integrals leading to the following form:
 
 .. math::
     \rho\text{b} + \nabla\cdot\sigma - \nabla \cdot \left\{ \vec{\text{v}}(\rho\vec{\text{v}}) \right\} =
-    \rho\frac{ d \vec{\text{v}} }{dt}
+    \rho\frac{ \partial \vec{\text{v}} }{\partial t}
 
 Rewritting the above with index notation we have
 
 .. math::
     \rho b_j + \sigma_{ij,i} - \left\{ \vec{\text{v}}(\rho\vec{\text{v}}) \right\}_{,i} =
-    \rho\frac{dv_j}{dt}
+    \rho\frac{\partial v_j}{\partial t}
+
+Applying the divergence to the third term and doing the development with index
+notation, we have
+
+.. math::
+    \rho b_j + \sigma_{ij,i} - \left\{ v_{j,i}\left( \rho v_i \right) + v_j\left( \rho v_i \right)_{,i} \right\} =
+    \rho\frac{\partial v_j}{\partial t}
+
+Writting the divergence with the operand :math:`\partial/\partial x_i` the expression
+is as follows:
+
+.. math::
+    \rho b_j + \sigma_{ij,i} - \left\{ \left( \rho v_i \right)\frac{\partial v_j}{\partial x_i} + v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) \right\} =
+    \rho\frac{\partial v_j}{\partial t} \tag{5}
+
+Now, using :math:`(2)` we can leave the term containing the time partial derivative
+on the left side and replace the expression on the right side of :math:`(5)`, leaving
+that
+
+.. math::
+    \rho b_j + \sigma_{ij,i} - \left\{ \left( \rho v_i \right)\frac{\partial v_j}{\partial x_i} + v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) \right\} =
+    \rho\frac{d v_j}{d t} - \left( \rho v_i \right) \frac{\partial v_j}{\partial x_i}
+
+Note that the last term of the right side vanishes with the same term on the left,
+leaving the expression
+
+.. math::
+    \rho b_j + \sigma_{ij,i} - v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) =
+    \rho\frac{d v_j}{d t}
