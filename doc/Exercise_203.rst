@@ -28,14 +28,14 @@ is as follows:
         \rho\frac{\partial v_j}{\partial t} + v_j\frac{\partial \rho}{\partial t} +
         v_j\frac{\partial}{\partial x_i} (\rho v_i) + (\rho v_i)\frac{\partial v_j}{\partial x_i} &= \\
         v_j \left\{ \frac{\partial\rho}{\partial t} + \frac{\partial}{\partial x_i}(\rho v_i) \right\} +
-        \rho \left\{ \frac{\partial v_j}{\partial t} + v_i\frac{\partial v_j}{\partial x_i} \right} &= 
+        \rho \left\{ \frac{\partial v_j}{\partial t} + v_i\frac{\partial v_j}{\partial x_i} \right\} &= 
         \rho \frac{dv_j}{dt}
     \end{align}
 
 Note that the first term vanishes because of mass conservation, leaving
 
 .. math::
-    \rho \left\{ \frac{\partial v_j}{\partial t} + v_i\frac{\partial v_j}{\partial x_i} \right} = 
+    \rho \left\{ \frac{\partial v_j}{\partial t} + v_i\frac{\partial v_j}{\partial x_i} \right\} = 
     \rho \frac{dv_j}{dt} \tag{2}
 
 Now that we have this result, the next step is to consider all the forces acting
