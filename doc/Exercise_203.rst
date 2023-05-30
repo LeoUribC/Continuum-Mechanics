@@ -161,3 +161,15 @@ leaving the expression
 .. math::
     \rho b_j + \sigma_{ij,i} - v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) =
     \rho\frac{d v_j}{d t}
+
+In this last form, we can rewrite the partial derivative in index notation, or we can
+rewrite all the expression into conventional notation, this is:
+
+.. math::
+    \begin{align}
+        \rho b_j + \sigma_{ij,i} - v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) =
+        \rho\frac{d v_j}{d t} \qquad& \text{Index notation} \\
+        \rho\mathbf{b} + \nabla \cdot \overline{\overline{\mathbf{\sigma}}} - \mathbf{v}\nabla\cdot\left( \rho \mathbf{v} \right) =
+        \rho\mathbf{\dot{v}} \qquad& \text{Conventional notation}
+    \end{align}
+
