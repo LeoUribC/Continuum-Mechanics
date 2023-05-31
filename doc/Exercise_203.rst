@@ -167,9 +167,14 @@ rewrite all the expression into conventional notation, this is:
 
 .. math::
     \begin{align}
-        \rho b_j + \sigma_{ij,i} - v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) =
+        \rho b_j + \sigma_{ij,i} - v_j \left( \rho v_i \right)_{,i} =
         \rho\frac{d v_j}{d t} \qquad& \text{Index notation} \\
         \rho\mathbf{b} + \nabla \cdot \overline{\overline{\mathbf{\sigma}}} - \mathbf{v}\nabla\cdot\left( \rho \mathbf{v} \right) =
         \rho\mathbf{\dot{v}} \qquad& \text{Conventional notation}
     \end{align}
 
+This equation shows how body forces, stress and flux of velocity in the medium that
+transports the linear momentum in a particular direction affects its rate of change,
+showing that the right side of (20.4) could be rewritten as stated in the problem by
+obtaining the equation for the balance of linear momentum for a control volume
+fixed in space.
