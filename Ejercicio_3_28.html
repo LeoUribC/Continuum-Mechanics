@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem 3.28 &mdash; continuum-mechanics 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3.29" href="Ejercicio_3_29.html" />
+    <link rel="prev" title="Exercise 3.18" href="Ejercicio_3_18.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            continuum-mechanics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Exercise_1.html"><strong>Exercise 1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_8.html"><strong>Exercise 3.8</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_18.html"><strong>Exercise 3.18</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Problem 3.28</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#solving">Solving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_29.html"><strong>Problem 3.29</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">This is a new feature!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_191.html"><strong>Example 19.1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_203.html">Exercise 20.3</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">continuum-mechanics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Problem 3.28</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Ejercicio_3_28.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="problem-3-28">
+<h1><strong>Problem 3.28</strong><a class="headerlink" href="#problem-3-28" title="Permalink to this heading"></a></h1>
+<p>At point <span class="math notranslate nohighlight">\(P\)</span> in acontinuum body, the stress tensor components are
+given in MPa with respect to the axes <span class="math notranslate nohighlight">\(Px_1x_2x_3\)</span> by the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} [t_{ij}] =
+\begin{bmatrix}
+    1 &amp; -3 &amp; \sqrt2 \\
+    -3 &amp; 1 &amp; -\sqrt2 \\
+    \sqrt2 &amp; -\sqrt2 &amp; 4
+\end{bmatrix}\end{split}\]</div>
+<div class="line-block">
+<div class="line">Determine</div>
+<div class="line">(a) the principal stress values
+<span class="math notranslate nohighlight">\(\sigma_{I}\)</span>,<span class="math notranslate nohighlight">\(\sigma_{II}\)</span> and <span class="math notranslate nohighlight">\(\sigma_{III}\)</span>
+together with the corresponding principal directions</div>
+<div class="line">(b) The stress invariants <span class="math notranslate nohighlight">\(I_T\)</span>, <span class="math notranslate nohighlight">\(II_T\)</span> and <span class="math notranslate nohighlight">\(III_T\)</span></div>
+<div class="line">(c) The maximum shear stress value and the normal to the plane on wich
+it acts</div>
+<div class="line">(d) the principal deviator stress values</div>
+<div class="line">(e) the stress vector on the octahedral plane together with it’s
+normal and shear components</div>
+<div class="line">(f) the stress matrix for axes rotated 60° counterclockwise with
+respect to the axis <span class="math notranslate nohighlight">\(PQ\)</span>, which makes equal angles relative to
+the coordinate axes <span class="math notranslate nohighlight">\(Px_1x_2x_3\)</span></div>
+</div>
+</section>
+<section id="solving">
+<h1>Solving<a class="headerlink" href="#solving" title="Permalink to this heading"></a></h1>
+<ol class="loweralpha simple">
+<li><p>Principal stress values and principal stress directiones</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span>
+              <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span>
+              <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">values</span><span class="p">,</span> <span class="n">directions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Principal stress values&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Principal stress directions&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">directions</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Principal</span> <span class="n">stress</span> <span class="n">values</span>
+<span class="p">[</span> <span class="mf">6.</span> <span class="o">-</span><span class="mf">2.</span>  <span class="mf">2.</span><span class="p">]</span>
+
+
+<span class="n">Principal</span> <span class="n">stress</span> <span class="n">directions</span>
+<span class="p">[[</span><span class="o">-</span><span class="mf">5.00000000e-01</span>  <span class="mf">7.07106781e-01</span> <span class="o">-</span><span class="mf">5.00000000e-01</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">5.00000000e-01</span>  <span class="mf">7.07106781e-01</span>  <span class="mf">5.00000000e-01</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">7.07106781e-01</span>  <span class="mf">1.92232847e-16</span>  <span class="mf">7.07106781e-01</span><span class="p">]]</span>
+</pre></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>the stress invariants</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">IT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">IT</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">6.0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">IIT</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">IIT</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">9.0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">IIIT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">IIIT</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">24.000000000000014</span>
+</pre></div>
+</div>
+<ol class="loweralpha simple" start="3">
+<li><p>The maximum shear stress value and the normal to the plane on wich
+it acts</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\sigma_{max} = \max \left( \left| \frac{\sigma_1}{2} \right|, \left| \frac{\sigma_2}{2} \right|, \left| \frac{\sigma_3}{2} \right|, \left| \frac{\sigma_1 - \sigma_2}{2} \right|, \left| \frac{\sigma_1 - \sigma_3}{2} \right|, \left| \frac{\sigma31 - \sigma_2}{2} \right| \right)\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sigma1</span><span class="p">,</span><span class="n">sigma2</span><span class="p">,</span><span class="n">sigma3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">t</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">t</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">t</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">sigmas</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">sigma1</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma3</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma1</span> <span class="o">-</span> <span class="n">sigma2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma1</span> <span class="o">-</span><span class="n">sigma3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma2</span><span class="o">-</span><span class="n">sigma3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">sigmas</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.999999999999999</span>
+</pre></div>
+</div>
+<ol class="loweralpha simple" start="4">
+<li><p>The principal deviator stress values</p></li>
+</ol>
+<p>We know that</p>
+<div class="math notranslate nohighlight">
+\[\sigma_M = \frac{t_{ij}}{3} = \frac{T_{kk}}{2} = \frac{4}{2}\]</div>
+<p>We define deviatoric stress to be</p>
+<div class="math notranslate nohighlight">
+\[S = T - \frac{T_{kk}}{2} I\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} [t_{ij}] =
+\begin{bmatrix}
+    1 &amp; -3 &amp; \sqrt2 \\
+    -3 &amp; 1 &amp; -\sqrt2 \\
+    \sqrt2 &amp; -\sqrt2 &amp; 4
+\end{bmatrix} -
+\begin{bmatrix}
+    4/2 &amp; 0 &amp; 0 \\
+    0 &amp; 4/2 &amp; 0 \\
+    0 &amp; 0 &amp; 4/2
+\end{bmatrix}\end{split}\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">T_kk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="o">/</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">T_kk</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">]])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">T_kk</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="o">-</span><span class="mf">1.</span>         <span class="o">-</span><span class="mf">3.</span>          <span class="mf">1.41421356</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">3.</span>         <span class="o">-</span><span class="mf">1.</span>         <span class="o">-</span><span class="mf">1.41421356</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">1.41421356</span> <span class="o">-</span><span class="mf">1.41421356</span>  <span class="mf">2.</span>        <span class="p">]]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span> <span class="mf">4.00000000e+00</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.00000000e+00</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25961676e-16</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Ejercicio_3_18.html" class="btn btn-neutral float-left" title="Exercise 3.18" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Ejercicio_3_29.html" class="btn btn-neutral float-right" title="Problem 3.29" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Leandro Uribe, Jhon Wilmer Pino.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

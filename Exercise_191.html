@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 19.1 &mdash; continuum-mechanics 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exercise 20.3" href="Exercise_203.html" />
+    <link rel="prev" title="This is a new feature!" href="test.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            continuum-mechanics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_1.html"><strong>Exercise 1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_8.html"><strong>Exercise 3.8</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_18.html"><strong>Exercise 3.18</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html"><strong>Problem 3.28</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html#solving">Solving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_29.html"><strong>Problem 3.29</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">This is a new feature!</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Example 19.1</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#solution"><strong>Solution</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-leibniz-rule"><strong>The Leibniz rule</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_203.html">Exercise 20.3</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">continuum-mechanics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Example 19.1</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Exercise_191.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="example-19-1">
+<h1><strong>Example 19.1</strong><a class="headerlink" href="#example-19-1" title="Permalink to this heading"></a></h1>
+<p>Fill in the details of obtaining (19.15) from (19.14)</p>
+<hr class="docutils" />
+<div class="math notranslate nohighlight">
+\[I = \frac{d}{dt} ∫_v ρ(x[X,t],t)A(x[X,t],t)J \tag{19.14}\]</div>
+<div class="math notranslate nohighlight">
+\[I = \frac{d}{dt} ∫_v \{j_ρ(x[X,t],t)\frac{d}{dt}A(x[X,t],t)\}dV \tag{19.15}\]</div>
+<section id="solution">
+<h2><strong>Solution</strong><a class="headerlink" href="#solution" title="Permalink to this heading"></a></h2>
+<p>To derive equation (19.15) from equation (19.14), we need to apply
+the Leibniz rule for differentiating an integral with respect to
+time.</p>
+<p>Starting with equation (19.14):</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{d}{dt} ∫_v ρ(x[X,t],t)A(x[X,t],t)J \tag{19.14}\]</div>
+<p>We cap apply the Leibniz rule to the integrand, treating both
+<span class="math notranslate nohighlight">\(ρ(x[X,t],t)\)</span> and <span class="math notranslate nohighlight">\(A(x[X,t],t)\)</span> as functions of
+<span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I =  ∫_v \frac{d}{dt} (ρ(x[X,t],t)A(x[X,t],t)J) dV\]</div>
+</section>
+<hr class="docutils" />
+<section id="the-leibniz-rule">
+<h2><strong>The Leibniz rule</strong><a class="headerlink" href="#the-leibniz-rule" title="Permalink to this heading"></a></h2>
+<p>The Leibniz rule, also known as the Leibniz integral rule or the
+differentiation under the integral sign, is a powerful tool for
+differentiating integrals with respect to a parameter. It allows us
+to interchange the order of differentiation and integration.</p>
+<p>In the context of the exercise, we have the integral:</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{d}{dt} \int_v \rho(x[X,t],t)A(x[X,t],t)J\]</div>
+<p>To apply the Leibniz rule, we differentiate the integrand with
+respect to time, treating both <span class="math notranslate nohighlight">\(ρ(x[X,t],t)\)</span> and
+<span class="math notranslate nohighlight">\(A(x[X,t],t)J\)</span> as functions of <span class="math notranslate nohighlight">\(t\)</span>. The rule states that
+we can differentiate the integrand and then integrate it, or
+alternatively, integrate the function and then differentiate the
+result.</p>
+<p>Mathematically, the Leibniz rule can be expressed as follows:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt} \int_{a(t)}^{b(t)} f(x,t)dx = \int_{a(t)}^{b(t)} \frac{∂f}{dt}(x,t)dx + f(b(t),t)\frac{db}{dt} - f(a(t),t)\frac{da}{dt}\]</div>
+<p>In the equation above, <span class="math notranslate nohighlight">\(f(x,t)\)</span> is the integrand, and
+<span class="math notranslate nohighlight">\(a(t)\)</span> and <span class="math notranslate nohighlight">\(b(t)\)</span> are the limits of integration, which
+can be functions of <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Applying the Leibniz rule to the equation, we have:</p>
+<div class="math notranslate nohighlight">
+\[I= \frac{d}{dt}∫_v ρ(x[X,t],t)A(x[X,t],t)J\]</div>
+<div class="math notranslate nohighlight">
+\[I=∫_v\frac{d}{dt} (ρ(x[X,t],t)A(x[X,t],t)J)dV\]</div>
+<p>By differentiating the integrand with respect to t, we obtain the
+terms <span class="math notranslate nohighlight">\(ρ\frac{dA}{dt}J\)</span> and <span class="math notranslate nohighlight">\(ρA\frac{dJ}{dt}\)</span>. However,
+in the equation, the term <span class="math notranslate nohighlight">\(ρA\frac{dJ}{dt}\)</span> is not present,
+possibly due to assumptions or simplifications made in the
+derivation. Hence, only the term <span class="math notranslate nohighlight">\(ρ\frac{dA}{dt}J\)</span> remains.</p>
+<p>Therefore, applying the Leibniz rule allows us to differentiate the
+integrand with respect to time and then integrate it, resulting in
+the final equation.</p>
+<hr class="docutils" />
+<p>Now, we can expand the derivative using the product rule:</p>
+<div class="math notranslate nohighlight">
+\[I = \int_v \left( \frac{d\rho}{dt}A + \rho\frac{dA}{dt}\right)JdV\]</div>
+<p>Next, we can rearrange the terms inside the integral:</p>
+<div class="math notranslate nohighlight">
+\[I = \int_v \frac{d\rho}{dt}AJ + \rho\frac{dA}{dt}JdV\]</div>
+<p>Now, for the first term, <span class="math notranslate nohighlight">\(\int_v \frac{d\rho}{dt}AJ\)</span>, we can
+aply the Leibniz rule again to separate the derivative of
+<span class="math notranslate nohighlight">\(\rho\)</span> from the integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_v\frac{d\rho}{dt}AJ = \frac{d}{dt}\left( \int_v \rho AJdV \right) - \int_v \rho \frac{d}{dt}(AJ)dV\]</div>
+<p>Using the definition of <span class="math notranslate nohighlight">\(I\)</span>, we can simplify the first term:</p>
+<div class="math notranslate nohighlight">
+\[\int_v \frac{d\rho}{dt}AJ + \rho\frac{dA}{dt}JdV = \frac{d}{dt} \left( \int_v \rho AJdV\right)\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dI}{dt} = \frac{d}{dt} \left( \int_v \rho AJdV \right)\]</div>
+<p>Substituting back in the equation, now we have:</p>
+<div class="math notranslate nohighlight">
+\[\int_v \frac{d\rho}{dt}AJ = \frac{dI}{dt} - \int_v \rho \frac{d}{dt} (AJ)dV\]</div>
+<p>Now, let’s substitute in the original equation and rearrange some
+terms:</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{dI}{dt} + \int_v \rho \frac{d}{dt}(AJ)dV + \rho \frac{dA}{dt} J\]</div>
+<div class="math notranslate nohighlight">
+\[I = \frac{dI}{dt} + \int_v \rho \frac{d}{dt}(A - AJ) dV\]</div>
+<div class="math notranslate nohighlight">
+\[I = \frac{dI}{dt} + \int_v \rho \frac{d}{dt}(A - AJ)dV\]</div>
+<p>Now, let’s remember that
+<span class="math notranslate nohighlight">\(A - AJ = j_ρ(x[X,t],t)\frac{d}{dt}A(x[X,t],t)\)</span></p>
+<p>So, we finally have that</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{dI}{dt} + ∫_v \{j_ρ(x[X,t],t)\frac{d}{dt}A(x[X,t],t)\}dV \tag{19.15}\]</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test.html" class="btn btn-neutral float-left" title="This is a new feature!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Exercise_203.html" class="btn btn-neutral float-right" title="Exercise 20.3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Leandro Uribe, Jhon Wilmer Pino.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

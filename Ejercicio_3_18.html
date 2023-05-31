@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 3.18 &mdash; continuum-mechanics 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem 3.28" href="Ejercicio_3_28.html" />
+    <link rel="prev" title="Exercise 3.8" href="Ejercicio_3_8.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            continuum-mechanics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Exercise_1.html"><strong>Exercise 1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_8.html"><strong>Exercise 3.8</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Exercise 3.18</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#solving">Solving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html"><strong>Problem 3.28</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html#solving">Solving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_29.html"><strong>Problem 3.29</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">This is a new feature!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_191.html"><strong>Example 19.1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_203.html">Exercise 20.3</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">continuum-mechanics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Exercise 3.18</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Ejercicio_3_18.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="exercise-3-18">
+<h1><strong>Exercise 3.18</strong><a class="headerlink" href="#exercise-3-18" title="Permalink to this heading"></a></h1>
+<p>The stress tensor at <span class="math notranslate nohighlight">\(P\)</span> is given with respect to
+<span class="math notranslate nohighlight">\(Ox_1x_2x_3\)</span> in matrix form with units of MPa by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} [t_{ij}] =
+\begin{bmatrix}
+    4 &amp; b &amp; b \\
+    b &amp; 7 &amp; 2 \\
+    b &amp; 2 &amp; 4
+\end{bmatrix}\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(b\)</span> is unespecified. If
+<span class="math notranslate nohighlight">\(\sigma_{III} = 3 \; \text{MPa}\)</span> and
+<span class="math notranslate nohighlight">\(\sigma_{I} = 2\sigma_{II}\)</span>, determine</p>
+<ol class="loweralpha simple">
+<li><p>the principal stress values</p></li>
+<li><p>the value of b</p></li>
+<li><p>the principal stress direction of <span class="math notranslate nohighlight">\(\sigma_{II}\)</span></p></li>
+</ol>
+<section id="solving">
+<h2>Solving<a class="headerlink" href="#solving" title="Permalink to this heading"></a></h2>
+<p>Let’s import the necessary libraries and declare the stress tensor
+given:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">init_printing</span><span class="p">()</span>
+
+<span class="n">lamda</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;lambda&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">],[</span><span class="n">b</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<span class="n">t</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \left[ \left[ 4, \  b, \  b\right], \  \left[ b, \  7, \  2\right], \  \left[ b, \  2, \  4\right]\right]\]</div>
+<p>First, let’s use the algorithm to find the determinant.</p>
+<div class="admonition-remember-the-algorithm admonition">
+<p class="admonition-title">remember the algorithm</p>
+<p>the algorithm to find principal values and directions with index notation is:</p>
+<div class="math notranslate nohighlight">
+\[\left( t_{ij} - \lambda \delta_{ij} n_j \right) = 0\]</div>
+</div>
+<p>Finding the determinant we have:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t_lamda</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="o">-</span><span class="n">lamda</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">],[</span><span class="n">b</span><span class="p">,</span><span class="mi">7</span><span class="o">-</span><span class="n">lamda</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="o">-</span><span class="n">lamda</span><span class="p">]]</span>
+<span class="n">t_lamda</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \left[ \left[ 4 - \lambda, \  b, \  b\right], \  \left[ b, \  7 - \lambda, \  2\right], \  \left[ b, \  2, \  4 - \lambda\right]\right]\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">det</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="n">lamda</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="mi">7</span><span class="o">-</span><span class="n">lamda</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">lamda</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">2</span><span class="p">))</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="p">((</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">lamda</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="p">((</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">lamda</span><span class="p">))</span>
+<span class="n">det</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle - b \left(b \left(4 - \lambda\right) - 2 b\right) + b \left(- b \left(7 - \lambda\right) + 2 b\right) + \left(4 - \lambda\right) \left(\left(4 - \lambda\right) \left(7 - \lambda\right) - 4\right)\]</div>
+<p>Now, we know that <span class="math notranslate nohighlight">\(\lambda = 3\)</span>, so let’s replace in the
+polynomial and solve the equation for this <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">det</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">lamda</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \left[ 0\right]\]</div>
+<p>Then, <span class="math notranslate nohighlight">\(b=0\)</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">],[</span><span class="n">b</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<span class="n">t</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \left[ \left[ 4, \  0, \  0\right], \  \left[ 0, \  7, \  2\right], \  \left[ 0, \  2, \  4\right]\right]\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">t</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">8.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We have then that <span class="math notranslate nohighlight">\(\sigma_{III} = 3 \; \text{MPa}\)</span>,
+<span class="math notranslate nohighlight">\(\sigma_{I} = 8 \; \text{MPa}\)</span>, and
+<span class="math notranslate nohighlight">\(\sigma_{II} = 4 \; \text{MPa}\)</span>.</p>
+<p>So <span class="math notranslate nohighlight">\(\sigma_{I} = 2\sigma_{II}\)</span> as expected.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">t</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span> <span class="mf">0.</span>        <span class="p">,</span>  <span class="mf">0.</span>        <span class="p">,</span>  <span class="mf">1.</span>        <span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.4472136</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.89442719</span><span class="p">,</span>  <span class="mf">0.</span>        <span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">0.89442719</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4472136</span> <span class="p">,</span>  <span class="mf">0.</span>        <span class="p">]])</span>
+</pre></div>
+</div>
+<p>Finally, as seen, the principal direction associated with
+<span class="math notranslate nohighlight">\(\sigma_{II}\)</span> is the vector <span class="math notranslate nohighlight">\([1,0,0]\)</span>, or,</p>
+<div class="math notranslate nohighlight">
+\[\hat{n}^{(2)} = \hat{e}_1\]</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Ejercicio_3_8.html" class="btn btn-neutral float-left" title="Exercise 3.8" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Ejercicio_3_28.html" class="btn btn-neutral float-right" title="Problem 3.28" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Leandro Uribe, Jhon Wilmer Pino.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

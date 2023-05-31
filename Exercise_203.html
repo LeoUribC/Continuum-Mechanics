@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 20.3 &mdash; continuum-mechanics 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Example 19.1" href="Exercise_191.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            continuum-mechanics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_1.html"><strong>Exercise 1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_8.html"><strong>Exercise 3.8</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_18.html"><strong>Exercise 3.18</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html"><strong>Problem 3.28</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html#solving">Solving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_29.html"><strong>Problem 3.29</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">This is a new feature!</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Exercise_191.html"><strong>Example 19.1</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exercise 20.3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#solving"><strong>Solving</strong></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">continuum-mechanics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Exercise 20.3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Exercise_203.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="exercise-20-3">
+<h1>Exercise 20.3<a class="headerlink" href="#exercise-20-3" title="Permalink to this heading"></a></h1>
+<p>Show that the right side of (20.4) can be written as:</p>
+<div class="math notranslate nohighlight">
+\[\rho \frac{ dv_j }{dt} = \frac{\partial}{\partial t} \left( \rho v_j \right) +
+\frac{\partial}{\partial x_i} \left( \rho v_i v_j \right) \tag{1}\]</div>
+<p>and use this result to derive the equation for the balance of linear momentum for a
+control volume fixed in space.</p>
+<section id="solving">
+<h2><strong>Solving</strong><a class="headerlink" href="#solving" title="Permalink to this heading"></a></h2>
+<p>Note that (20.4) is given by:</p>
+<div class="math notranslate nohighlight">
+\[\frac{ \partial \sigma_{ij} }{ \partial x_i } + \rho b_j = \rho \frac{ dv_j }{dt}\]</div>
+<p>Taking the right side of <span class="math notranslate nohighlight">\((1)\)</span> by making the partial derivatives, the process
+is as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \frac{\partial}{\partial t} (\rho v_j) + \frac{\partial}{\partial x_i} (\rho v_i v_j) &amp;= \\
+    \rho\frac{\partial v_j}{\partial t} + v_j\frac{\partial \rho}{\partial t} +
+    v_j\frac{\partial}{\partial x_i} (\rho v_i) + (\rho v_i)\frac{\partial v_j}{\partial x_i} &amp;= \\
+    v_j \left\{ \frac{\partial\rho}{\partial t} + \frac{\partial}{\partial x_i}(\rho v_i) \right\} +
+    \rho \left\{ \frac{\partial v_j}{\partial t} + v_i\frac{\partial v_j}{\partial x_i} \right\} &amp;=
+    \rho \frac{dv_j}{dt}
+\end{align}\end{split}\]</div>
+<p>Note that the first term vanishes because of mass conservation, leaving</p>
+<div class="math notranslate nohighlight">
+\[\rho \left\{ \frac{\partial v_j}{\partial t} + v_i\frac{\partial v_j}{\partial x_i} \right\} =
+\rho \frac{dv_j}{dt} \tag{2}\]</div>
+<p>Now that we have this result, the next step is to consider all the forces acting
+on a <em>control volume</em> for its balance of linear momentum fixed in space, which is
+followed by the expression</p>
+<div class="math notranslate nohighlight">
+\[\sum \vec{F} = \sum \vec{F}_{\text{body}} + \sum \vec{F}_{\text{surface}}\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Control surface and volume</p>
+<p>A control surface is a surface that is defined to analyze the flow of a fluid or
+the behaviour of a continuous medium. The control surface can be arbitrarily
+selected to enclose a specific region. It can be an imaginary surface, such as a
+mathematical or geometric surface, or it can be a physical surface, like a wall,
+a plate, or an object. A control volume is a collection of points in space
+located within a closed control surface.</p>
+</div>
+<p>The expression above considers the <strong>body force</strong> <span class="math notranslate nohighlight">\(\sum \vec{F}_{\text{body}}\)</span>
+and the <strong>surface forces</strong> <span class="math notranslate nohighlight">\(\sum \vec{F}_{\text{surface}}\)</span> which following
+the continuum basis we already know they can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[\sum \vec{F} = \int_{v(t)} \rho \text{b} dv + \int_{a(t)} \text{t} da \tag{3}\]</div>
+<p>The surface forces can be either pressure, viscosity or others, in this case, we’ll
+only consider the <strong>traction</strong>. Note that this surface force is acting on the
+surface that encloses the control volume, later it’ll be necessary to apply the
+divergence theorem to analize the volume.</p>
+<p>Following the main objective, it is necessary to consider the Newton’s Second Law
+fixing the space for the volume, this is carried out by differentiating the linear
+momentum and adding <strong>the flux of momentum through the boundary into the volume</strong>.
+This is,</p>
+<div class="math notranslate nohighlight">
+\[\sum \vec{F} = \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv +
+\int_{ \text{CS} } \hat{\text{n}} \cdot \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \; da
+\tag{4}\]</div>
+<p>This considers the total flux of momentum through the control volume
+(<span class="math notranslate nohighlight">\(\text{CV}\)</span>) enclosed by a control surface (<span class="math notranslate nohighlight">\(\text{CS}\)</span>).</p>
+<div class="tip admonition">
+<p class="admonition-title">Flux of momentum</p>
+<p>The net rate of momentum flow out of the control surface per unit mass flow rate
+(the flux of momentum through the boundary) refers to the amount of momentum
+flowing through a control surface relative to the mass flow passing through that
+surface.</p>
+</div>
+<p>We can now compare equations <span class="math notranslate nohighlight">\((3)\)</span> and <span class="math notranslate nohighlight">\((4)\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \int_{v(t)} \rho \text{b} \; dv + \int_{a(t)} \text{t} \; da &amp;=
+    \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv +
+    \int_{ \text{CS} } \hat{\text{n}} \cdot \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \; da \\
+    \int_{v(t)} \rho \text{b} \; dv + \int_{a(t)} \text{t} \; da -
+    \int_{ \text{CS} } \hat{\text{n}} \cdot \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \; da &amp;=
+    \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv
+\end{align}\end{split}\]</div>
+<p>We must now apply the divergence theorem to all the parts that are expressed in terms
+of the surface. To the term containing the traction, it is necessary to express it as
+the definition with the stress tensor <span class="math notranslate nohighlight">\(\sigma\)</span> and the normal direction
+<span class="math notranslate nohighlight">\(\hat{\text{n}}\)</span>. By doing so we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \int_{v(t)} \rho \text{b} \; dv + \int_{a(t)} \sigma \cdot \hat{\text{n}} \; da -
+    \int_{\text{CV}} \nabla \cdot \left\{ \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \right\} \; dv &amp;=
+    \frac{\partial}{\partial t} \int_{ \text{CV} } \rho\vec{ \text{v} } \; dv \\
+    \int_{v(t)} \rho \text{b} \; dv + \int_{v(t)} \nabla \cdot \sigma \; dv -
+    \int_{\text{CV}} \nabla \cdot \left\{ \vec{ \text{v} } \left( \rho \vec{ \text{v} } \right) \right\} \; dv &amp;=
+    \int_{ \text{CV} } \rho \frac{\partial}{\partial t} \vec{ \text{v} } \; dv
+\end{align}\end{split}\]</div>
+<p>Note that in the right term the derivative was moved inside the integral, this was
+possible because of Reynold’s Theorem. With this expression, we can now get rid of
+all the integrals leading to the following form:</p>
+<div class="math notranslate nohighlight">
+\[\rho\text{b} + \nabla\cdot\sigma - \nabla \cdot \left\{ \vec{\text{v}}(\rho\vec{\text{v}}) \right\} =
+\rho\frac{ \partial \vec{\text{v}} }{\partial t}\]</div>
+<p>Rewritting the above with index notation we have</p>
+<div class="math notranslate nohighlight">
+\[\rho b_j + \sigma_{ij,i} - \left\{ \vec{\text{v}}(\rho\vec{\text{v}}) \right\}_{,i} =
+\rho\frac{\partial v_j}{\partial t}\]</div>
+<p>Applying the divergence to the third term and doing the development with index
+notation, we have</p>
+<div class="math notranslate nohighlight">
+\[\rho b_j + \sigma_{ij,i} - \left\{ v_{j,i}\left( \rho v_i \right) + v_j\left( \rho v_i \right)_{,i} \right\} =
+\rho\frac{\partial v_j}{\partial t}\]</div>
+<p>Writting the divergence with the operand <span class="math notranslate nohighlight">\(\partial/\partial x_i\)</span> the expression
+is as follows:</p>
+<div class="math notranslate nohighlight">
+\[\rho b_j + \sigma_{ij,i} - \left\{ \left( \rho v_i \right)\frac{\partial v_j}{\partial x_i} + v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) \right\} =
+\rho\frac{\partial v_j}{\partial t} \tag{5}\]</div>
+<p>Now, using <span class="math notranslate nohighlight">\((2)\)</span> we can leave the term containing the time partial derivative
+on the left side and replace the expression on the right side of <span class="math notranslate nohighlight">\((5)\)</span>, leaving
+that</p>
+<div class="math notranslate nohighlight">
+\[\rho b_j + \sigma_{ij,i} - \left\{ \left( \rho v_i \right)\frac{\partial v_j}{\partial x_i} + v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) \right\} =
+\rho\frac{d v_j}{d t} - \left( \rho v_i \right) \frac{\partial v_j}{\partial x_i}\]</div>
+<p>Note that the last term of the right side vanishes with the same term on the left,
+leaving the expression</p>
+<div class="math notranslate nohighlight">
+\[\rho b_j + \sigma_{ij,i} - v_j \frac{\partial}{\partial x_i} \left( \rho v_i \right) =
+\rho\frac{d v_j}{d t}\]</div>
+<p>In this last form, we can rewrite the partial derivative in index notation, or we can
+rewrite all the expression into conventional notation, this is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \rho b_j + \sigma_{ij,i} - v_j \left( \rho v_i \right)_{,i} =
+    \rho\frac{d v_j}{d t} \qquad&amp; \text{Index notation} \\
+    \rho\mathbf{b} + \nabla \cdot \overline{\overline{\mathbf{\sigma}}} - \mathbf{v}\nabla\cdot\left( \rho \mathbf{v} \right) =
+    \rho\mathbf{\dot{v}} \qquad&amp; \text{Conventional notation}
+\end{align}\end{split}\]</div>
+<p>This equation shows how body forces, stress and flux of velocity in the medium that
+transports the linear momentum in a particular direction affects its rate of change,
+showing that the right side of (20.4) could be rewritten as stated in the problem by
+obtaining the equation for the balance of linear momentum for a control volume
+fixed in space.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Exercise_191.html" class="btn btn-neutral float-left" title="Example 19.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Leandro Uribe, Jhon Wilmer Pino.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

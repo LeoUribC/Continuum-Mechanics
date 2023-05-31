@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 1 &mdash; continuum-mechanics 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exercise 3.8" href="Ejercicio_3_8.html" />
+    <link rel="prev" title="Welcome to continuum-mechanics’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            continuum-mechanics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Exercise 1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_8.html"><strong>Exercise 3.8</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_18.html"><strong>Exercise 3.18</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html"><strong>Problem 3.28</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_28.html#solving">Solving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicio_3_29.html"><strong>Problem 3.29</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">This is a new feature!</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_191.html"><strong>Example 19.1</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_203.html">Exercise 20.3</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">continuum-mechanics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>Exercise 1</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Exercise_1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="exercise-1">
+<h1><strong>Exercise 1</strong><a class="headerlink" href="#exercise-1" title="Permalink to this heading"></a></h1>
+<p>Let’s deduce the maximum shear stress equations and values. Let us begin
+by defining the form of the traction tensor
+<span class="math notranslate nohighlight">\(\text{t}^{ (\hat{\text{n}}) }\)</span> and use it to define the normal
+stress value. This is given by:</p>
+<div class="math notranslate nohighlight">
+\[\text{t}^{ (\hat{\text{n}}) } = \text{T} \cdot \hat{\text{n}}, \quad \text{then} \quad \sigma_N = \text{t}^{ (\hat{\text{n}}) } \cdot \hat{ \text{n} }\]</div>
+<p>From this, we can see that if</p>
+<div class="math notranslate nohighlight">
+\[\text{t}^{ (\hat{\text{n}}) } = \sigma_I n_1 \hat{e}_1^* + \sigma_{II} n_2 \hat{e}_2^* + \sigma_{III} n_3 \hat{e}_3^*\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\sigma_N = \sigma_{I}n_1^2 + \sigma_{II}n_2^2 + \sigma_{III}n_3^2 \tag{1}\]</div>
+<p>We’ll use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library to determine this first result. Importing
+this library along <code class="docutils literal notranslate"><span class="pre">numpy</span></code> for other calculations:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import sympy as sp
+import numpy as np
+</pre></div>
+</div>
+<p>Now, we proceed to declare symbolic variables that we’ll use from now on
+in this problem:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s1, s2, s3, n1, n2, n3 = sp.symbols(&#39;\sigma_{I}, \sigma_{II}, \sigma_{III}, n_1, n_2, n_3&#39;)
+
+# declaring the normal vector and the stress tensor
+n = sp.Matrix([n1, n2, n3])
+
+tij = sp.Matrix(
+    [
+        [s1, 0, 0],
+        [0, s2, 0],
+        [0, 0, s3]
+    ]
+)
+
+# traction vector
+tin = tij*n
+tin
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\sigma_{I} n_{1}\\\sigma_{II} n_{2}\\\sigma_{III} n_{3}\end{matrix}\right]\end{split}\]</div>
+<p>After doing the calculation to find <span class="math notranslate nohighlight">\(\sigma_N\)</span> we have:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># finding normal stress value
+sn = tin.T*n  # it&#39;s necessary to transpose the traction
+sn = sn[0]  # extracting the only element in the remaining result
+sn
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \sigma_{III} n_{3}^{2} + \sigma_{II} n_{2}^{2} + \sigma_{I} n_{1}^{2}\]</div>
+<p>Now, knowing the definition of the <strong>shear stress componen</strong>
+<span class="math notranslate nohighlight">\(\sigma_S\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[\sigma_S^2 = \text{t}_i^{ (\hat{ \text{n} }) }\text{t}_i^{ (\hat{ \text{n} }) } - \sigma_N^2\]</div>
+<p>Let’s construct this component:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># calculation of shear stress component
+ss = (tin.T*tin)[0] - sn**2
+ss
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \sigma_{III}^{2} n_{3}^{2} + \sigma_{II}^{2} n_{2}^{2} + \sigma_{I}^{2} n_{1}^{2} - \left(\sigma_{III} n_{3}^{2} + \sigma_{II} n_{2}^{2} + \sigma_{I} n_{1}^{2}\right)^{2}\]</div>
+<p>We now know may express <span class="math notranslate nohighlight">\(n_3^2\)</span> in terms of <span class="math notranslate nohighlight">\(n_1, n_2\)</span>
+knowing that <span class="math notranslate nohighlight">\(n_i n_i = 1\)</span>, <span class="math notranslate nohighlight">\(n_3^2\)</span> becomes
+<span class="math notranslate nohighlight">\(n_3^2 = 1 - n_1^2 - n_2^2\)</span>. With this in mind we have:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># substitute in ss where values are n_3 for the expression above
+ss = ss.subs( n3, 1-n1**2-n2**2 )
+ss
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \sigma_{III}^{2} \left(- n_{1}^{2} - n_{2}^{2} + 1\right)^{2} + \sigma_{II}^{2} n_{2}^{2} + \sigma_{I}^{2} n_{1}^{2} - \left(\sigma_{III} \left(- n_{1}^{2} - n_{2}^{2} + 1\right)^{2} + \sigma_{II} n_{2}^{2} + \sigma_{I} n_{1}^{2}\right)^{2}\]</div>
+<p>In order to get the <em>stationary</em>, we must find the derivatives and equal
+them to 0 and solve the resultating system. This with the help of sympy
+becomes:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># finding the derivatives of ss respect with n1 and n2
+# then simplifying the expression
+ss_n1 = ss.diff(n1).simplify()
+ss_n2 = ss.diff(n2).simplify()
+
+# defining the system
+ss_n1_equation = sp.Eq(ss_n1, 0)
+ss_n2_equation = sp.Eq(ss_n2, 0)
+
+display(ss_n1_equation, ss_n2_equation)
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle 2 n_{1} \cdot \left(2 \sigma_{III}^{2} \left(n_{1}^{2} + n_{2}^{2} - 1\right) + \sigma_{I}^{2} - 2 \cdot \left(2 \sigma_{III} \left(n_{1}^{2} + n_{2}^{2} - 1\right) + \sigma_{I}\right) \left(\sigma_{III} \left(n_{1}^{2} + n_{2}^{2} - 1\right)^{2} + \sigma_{II} n_{2}^{2} + \sigma_{I} n_{1}^{2}\right)\right) = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle 2 n_{2} \cdot \left(2 \sigma_{III}^{2} \left(n_{1}^{2} + n_{2}^{2} - 1\right) + \sigma_{II}^{2} - 2 \cdot \left(2 \sigma_{III} \left(n_{1}^{2} + n_{2}^{2} - 1\right) + \sigma_{II}\right) \left(\sigma_{III} \left(n_{1}^{2} + n_{2}^{2} - 1\right)^{2} + \sigma_{II} n_{2}^{2} + \sigma_{I} n_{1}^{2}\right)\right) = 0\]</div>
+<p>Solving the system for <span class="math notranslate nohighlight">\(n_1, n_2\)</span> we have:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># solving for n1, n2
+sp.solve([ss_n1_equation, ss_n2_equation], [n1, n2], implicit=True)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">n_1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n_2</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>As expected, this is a trivial solution for the system. If we take
+<span class="math notranslate nohighlight">\(n_1=0\)</span> for both equations, let’s see the results for <span class="math notranslate nohighlight">\(n_2\)</span>:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># taking n1=0
+ss_n1_equation = ss_n1_equation.subs(n1, 0)
+ss_n2_equation = ss_n2_equation.subs(n1, 0)
+
+# solving for n2
+sp.solve([ss_n2_equation, ss_n1_equation], n2, implicit=True)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">n_2</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to continuum-mechanics’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Ejercicio_3_8.html" class="btn btn-neutral float-right" title="Exercise 3.8" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Leandro Uribe, Jhon Wilmer Pino.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
